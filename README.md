@@ -91,5 +91,5 @@ root/
 - Theme toggling not applying everywhere initially
 - Schema edge cases when options are missing
 
--
+
 
