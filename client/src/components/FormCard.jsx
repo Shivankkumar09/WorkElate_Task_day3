@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateField, removeField } from "../store/Formslice"; 
+import { updateField, removeField } from "../store/Formslice";
 
 export default function FormCard({ field }) {
   const dispatch = useDispatch();
@@ -44,24 +44,6 @@ export default function FormCard({ field }) {
           />
         );
 
-        return (
-          <input
-            type="email"
-            placeholder={field.placeholder || "example@email.com"}
-            className="border px-2 py-1 w-full rounded bg-white dark:bg-gray-700 text-black dark:text-white"
-            disabled
-          />
-        );
-
-        return (
-          <input
-            type="tel"
-            placeholder={field.placeholder || "1234567890"}
-            className="border px-2 py-1 w-full rounded bg-white dark:bg-gray-700 text-black dark:text-white"
-            disabled
-          />
-        );
-
       case "date":
         return (
           <input
@@ -96,17 +78,6 @@ export default function FormCard({ field }) {
           </div>
         );
 
-        return (
-          <div className="space-y-1">
-            {(field.options || []).map((opt, idx) => (
-              <label key={idx} className="flex items-center gap-2 text-black dark:text-white">
-                <input type="radio" name={field.id} disabled />
-                {opt}
-              </label>
-            ))}
-          </div>
-        );
-
       default:
         return null;
     }
@@ -132,19 +103,11 @@ export default function FormCard({ field }) {
         />
       )}
 
-      <input
-        type="text"
-        value={field.helpText || ""}
-        onChange={(e) => handleChange("helpText", e.target.value)}
-        placeholder="Help text (optional)"
-        className="text-sm w-full px-2 py-1 mb-2 border rounded text-black dark:text-white bg-white dark:bg-gray-700"
-      />
-
       <select
-  value={field.type}
-  onChange={(e) => handleChange("type", e.target.value)}
-  className="mb-2 w-full p-2 border rounded bg-white text-black dark:bg-gray-700 dark:text-white"
->
+        value={field.type}
+        onChange={(e) => handleChange("type", e.target.value)}
+        className="mb-2 w-full p-2 border rounded bg-white text-black dark:bg-gray-700 dark:text-white"
+      >
         <option value="text">Short Answer</option>
         <option value="textarea">Paragraph</option>
         <option value="dropdown">Dropdown</option>
