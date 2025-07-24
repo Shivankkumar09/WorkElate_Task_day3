@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <div className={theme === "dark" ? "dark" : "light"}>
       <header className="flex items-center justify-between px-4 py-3 shadow bg-white text-black dark:bg-gray-900 dark:text-white">
-        <h1 className="text-lg font-bold">FormCrafter</h1>
+        <h1 className="text-lg font-bold">FormBuilder</h1>
 
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-2xl">

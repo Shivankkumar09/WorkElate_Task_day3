@@ -153,7 +153,7 @@ const handleSubmit = async (e) => {
 
         if (field.required && selected.length === 0) {
           alert(`Please select at least one option for: ${field.label}`);
-          return; // ✅ exit whole function
+          return; 
         }
 
         userValue = selected;
@@ -171,7 +171,7 @@ const handleSubmit = async (e) => {
 
         if (field.required && !selected) {
           alert(`Please select an option for: ${field.label}`);
-          return; // ✅ exit whole function
+          return; 
         }
 
         userValue = selected;
@@ -183,7 +183,7 @@ const handleSubmit = async (e) => {
 
         if (field.required && !value) {
           alert(`Please fill out the required field: ${field.label}`);
-          return; // ✅
+          return; 
         }
 
         if (field.minLength && value.length < field.minLength) {
@@ -208,7 +208,7 @@ const handleSubmit = async (e) => {
         formData[field.label] = value;
       }
 
-      // Build field schema
+      
       schema.properties[key] = {
         type: field.type || "string",
         title: field.label || "",
@@ -224,23 +224,16 @@ const handleSubmit = async (e) => {
     }
   }
 
-  console.log("✅ Validated User Answers:", formData);
-  console.log("📤 Schema for backend:", schema);
 
   try {
-    await addFormResponse({ formId, schema }); // ✅ send clean schema
+    await addFormResponse({ formId, schema }); 
     alert("✅ Form submitted successfully!");
-    navigate(`/formsubmitted`, { state: { formId } }); // ✅ navigate to success page
+    navigate(`/formsubmitted`, { state: { formId } }); 
   } catch (err) {
-    console.error("❌ Error submitting form:", err);
+    console.error(" Error submitting form:", err);
     alert("Something went wrong. Try again!");
   }
 };
-
-
-
-
-
 
 
 
@@ -249,8 +242,8 @@ const handleSubmit = async (e) => {
       <Navbar />
       <div className="flex gap-2 mb-4">
         <button onClick={() => setViewMode("mobile")} className="px-3 py-1 rounded bg-blue-500 text-white">Mobile</button>
-        <button onClick={() => setViewMode("tablet")} className="px-3 py-1 rounded bg-green-500 text-white">Tablet</button>
-        <button onClick={() => setViewMode("desktop")} className="px-3 py-1 rounded bg-purple-500 text-white">Desktop</button>
+        <button onClick={() => setViewMode("tablet")} className="px-3 py-1 rounded bg-blue-500 text-white">Tablet</button>
+        <button onClick={() => setViewMode("desktop")} className="px-3 py-1 rounded bg-blue-500 text-white">Desktop</button>
       </div>
 
       <div
