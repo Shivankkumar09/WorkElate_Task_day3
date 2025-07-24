@@ -82,14 +82,13 @@ root/
 
 ---
 
-## 🐞 Known Issues & Challenges
+## 🐞 Issues & Challenges Faced
 
-
-### Form Builder
 - State syncing between form editor and preview
 - Drag-and-drop causing flicker in mobile view
-- Theme toggling not applying everywhere initially
 - Schema edge cases when options are missing
+- initial Validation in forms
+
 
 
 
