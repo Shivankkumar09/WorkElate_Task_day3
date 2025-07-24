@@ -31,7 +31,6 @@ export default function FormEdit() {
   const fields = useSelector((state) => state.form.fields);
   const name = useSelector((state) => state.form.name);
   const description = useSelector((state) => state.form.description);
-  const theme = useSelector((state) => state.form.theme);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -75,12 +74,12 @@ export default function FormEdit() {
   };
 
   return (
-    <div className={theme }>
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-white transition-colors">
+    <div>
+      <div className="min-h-screen bg-gray-900 text-white transition-colors">
         <div className="p-6 max-w-4xl mx-auto">
           <div className="mb-6 space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-300 mb-1">
                 Form Name
               </label>
               <input
@@ -88,19 +87,19 @@ export default function FormEdit() {
                 value={name}
                 onChange={(e) => dispatch(setFormName(e.target.value))}
                 placeholder="Enter form title"
-                className="w-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white p-2 rounded shadow-sm focus:outline-none focus:ring focus:border-blue-400"
+                className="w-full border border-gray-700 bg-gray-800 text-white p-2 rounded shadow-sm focus:outline-none focus:ring focus:border-blue-400"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-300 mb-1">
                 Form Description
               </label>
               <textarea
                 value={description}
                 onChange={(e) => dispatch(setFormDescription(e.target.value))}
                 placeholder="Add a short description for this form"
-                className="w-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white p-2 rounded shadow-sm focus:outline-none focus:ring focus:border-blue-400"
+                className="w-full border border-gray-700 bg-gray-800 text-white p-2 rounded shadow-sm focus:outline-none focus:ring focus:border-blue-400"
               />
             </div>
           </div>

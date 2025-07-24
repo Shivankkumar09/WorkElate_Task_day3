@@ -6,7 +6,6 @@ const initialState = {
   name: '',
   description: '',
   fields: [],
-  theme: 'dark',
   currentStep: 0,
   stepCount: 1,
    showJsonSchema: false,
