@@ -34,7 +34,7 @@ A full-stack web application built using **React**, **Tailwind CSS**, **Redux**,
 
 ```bash
 # Clone the repo
-git clone https://github.com/Shivankkumar09/formbuilder.git
+git clone https://github.com/Shivankkumar09/WorkElate_Task_day3.git
 cd tasknetic
 
 # Install frontend
@@ -82,14 +82,13 @@ root/
 
 ---
 
-## 🐞 Known Issues & Challenges
+## 🐞 Issues & Challenges Faced
 
-
-### Form Builder
 - State syncing between form editor and preview
 - Drag-and-drop causing flicker in mobile view
-- Theme toggling not applying everywhere initially
 - Schema edge cases when options are missing
+- initial Validation in forms
+
 
 
 
