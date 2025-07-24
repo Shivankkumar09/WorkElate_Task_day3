@@ -34,7 +34,7 @@ A full-stack web application built using **React**, **Tailwind CSS**, **Redux**,
 
 ```bash
 # Clone the repo
-git clone https://github.com/Shivankkumar09/formbuilder.git
+git clone https://github.com/Shivankkumar09/WorkElate_Task_day3.git
 cd tasknetic
 
 # Install frontend
