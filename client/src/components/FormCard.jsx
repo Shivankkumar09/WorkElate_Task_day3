@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { updateField, removeField } from "../store/FormSlice"; // Adjust path if needed
+import { updateField, removeField } from "../store/Formslice"; 
 
 export default function FormCard({ field }) {
   const dispatch = useDispatch();
